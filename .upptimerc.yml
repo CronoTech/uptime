@@ -11,21 +11,23 @@ sites:
 
 status-website:
   cname: status.cronotracker.com
+  favicon: https://app.cronotracker.com/favicon.ico
   logoUrl: https://app.cronotracker.com/favicon.ico
   name: CronoTracker Status
   introTitle: CronoTracker System Status
   introMessage: Real-time status and incident history for CronoTracker services.
-  theme: dark
-  navbar:
+  themeUrl: https://example.com/my-custom-theme.css
+navbar:
     - title: Status
       href: /
     - title: CronoTracker App
       href: https://app.cronotracker.com
-    - title: GitHub
-      href: https://github.com/CronoTech/uptime
-  css: |
-    html, body { background: #1e1b3a !important; }
-    nav { background: #272450 !important; border-bottom: 1px solid rgba(255,255,255,0.08) !important; }
+      
+commitMessages:
+  readmeContent: ":pencil: Update summary in README [skip ci] [upptime]"
+  summaryJson: ":card_file_box: Update status summary [skip ci] [upptime]"
+  statusChange: "$EMOJI $SITE_NAME is $STATUS ($RESPONSE_CODE in $RESPONSE_TIME ms) [skip ci] [upptime]"
+  graphsUpdate: ":bento: Update graphs [skip ci] [upptime]"
 
 assignees:
   - killer6oose
