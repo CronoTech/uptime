@@ -17,6 +17,7 @@ status-website:
   introTitle: CronoTracker System Status
   introMessage: Real-time status and incident history for CronoTracker services.
   themeUrl: https://status.cronotracker.com/dark.css
+  theme: dark
 navbar:
     - title: Status
       href: /
