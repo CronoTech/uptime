@@ -1,4 +1,4 @@
-owner: cronotech
+owner: CronoTech
 repo: uptime
 
 sites:
@@ -11,162 +11,21 @@ sites:
 
 status-website:
   cname: status.cronotracker.com
-  name: CronoTracker Status
   logoUrl: https://app.cronotracker.com/favicon.ico
+  name: CronoTracker Status
   introTitle: CronoTracker System Status
-  introMessage: Real-time status and incident history for CronoTracker services
+  introMessage: Real-time status and incident history for CronoTracker services.
   theme: dark
-
   navbar:
+    - title: Status
+      href: /
     - title: CronoTracker App
       href: https://app.cronotracker.com
-    - title: CronoTech Status
-      href: /
-
+    - title: GitHub
+      href: https://github.com/CronoTech/uptime
   css: |
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap');
-
-    :root {
-      --ct-purple:       #7c3aed;
-      --ct-purple-light: #a78bfa;
-      --ct-purple-dim:   rgba(124, 58, 237, 0.15);
-      --ct-bg:           #1e1b3a;
-      --ct-surface:      #272450;
-      --ct-surface-2:    #2f2b5a;
-      --ct-border:       rgba(255, 255, 255, 0.08);
-      --ct-text:         rgba(255, 255, 255, 0.90);
-      --ct-text-muted:   rgba(226, 217, 243, 0.55);
-      --ct-green:        #10b981;
-      --ct-red:          #ef4444;
-      --ct-yellow:       #f59e0b;
-    }
-
-    /* ── Base - colors and fonts only, no layout overrides ── */
-    html, body {
-      font-family: 'Inter', sans-serif !important;
-      background: var(--ct-bg) !important;
-      color: var(--ct-text) !important;
-    }
-
-    h1 {
-      font-family: 'Syne', sans-serif !important;
-      font-weight: 800 !important;
-      letter-spacing: -1px !important;
-      color: #fff !important;
-    }
-
-    h2, h3 {
-      font-family: 'Syne', sans-serif !important;
-      font-weight: 700 !important;
-      color: #fff !important;
-    }
-
-    /* ── Navbar ── */
-    nav {
-      background: var(--ct-surface) !important;
-      border-bottom: 1px solid var(--ct-border) !important;
-    }
-
-    nav a {
-      color: var(--ct-text) !important;
-      text-decoration: none !important;
-      transition: color 0.2s !important;
-    }
-
-    nav a:hover {
-      color: var(--ct-purple-light) !important;
-    }
-
-    /* ── Links (non-nav) ── */
-    main a, footer a {
-      color: var(--ct-purple-light) !important;
-      text-decoration: none !important;
-    }
-
-    main a:hover, footer a:hover {
-      color: #fff !important;
-    }
-
-    /* ── Time period tabs - inline-flex to keep them horizontal ── */
-    .links a {
-      display: inline-flex !important;
-      align-items: center !important;
-      background: var(--ct-surface-2) !important;
-      border: 1px solid var(--ct-border) !important;
-      color: var(--ct-text-muted) !important;
-      border-radius: 8px !important;
-      padding: 3px 10px !important;
-      font-size: 12px !important;
-      font-weight: 500 !important;
-      transition: all 0.2s !important;
-      text-decoration: none !important;
-      margin: 2px !important;
-    }
-
-    .links a:hover, .links a.active {
-      border-color: var(--ct-purple) !important;
-      color: var(--ct-purple-light) !important;
-    }
-
-    /* ── Status summary bar ── */
-    .status {
-      border-radius: 10px !important;
-      font-weight: 600 !important;
-    }
-
-    /* ── Per-service card wrapper only - not its children ── */
-    li.target {
-      background: var(--ct-surface) !important;
-      border: 1px solid var(--ct-border) !important;
-      border-radius: 12px !important;
-      margin-bottom: 10px !important;
-      transition: border-color 0.2s !important;
-      list-style: none !important;
-    }
-
-    li.target:hover {
-      border-color: rgba(124, 58, 237, 0.4) !important;
-    }
-
-    /* ── SVG sparkline graphs - tint to brand colors ── */
-    li.target svg path[fill] {
-      fill: rgba(124, 58, 237, 0.2) !important;
-    }
-
-    li.target svg path[stroke] {
-      stroke: var(--ct-purple-light) !important;
-    }
-
-    /* ── Uptime % text ── */
-    li.target .uptime {
-      color: var(--ct-green) !important;
-      font-weight: 700 !important;
-    }
-
-    /* ── Response time text ── */
-    li.target .response-time {
-      color: var(--ct-text-muted) !important;
-      font-size: 13px !important;
-    }
-
-    /* ── Footer ── */
-    footer {
-      border-top: 1px solid var(--ct-border) !important;
-      color: var(--ct-text-muted) !important;
-      font-size: 13px !important;
-    }
-
-    /* ── Incident cards ── */
-    .issue {
-      border-left: 3px solid var(--ct-red) !important;
-      border-radius: 0 8px 8px 0 !important;
-    }
-
-    /* ── Scrollbar ── */
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: var(--ct-bg); }
-    ::-webkit-scrollbar-thumb { background: var(--ct-surface-2); border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--ct-purple); }
+    html, body { background: #1e1b3a !important; }
+    nav { background: #272450 !important; border-bottom: 1px solid rgba(255,255,255,0.08) !important; }
 
 assignees:
   - killer6oose
