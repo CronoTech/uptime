@@ -15,10 +15,215 @@ status-website:
   logoUrl: https://app.cronotracker.com/favicon.ico
   introTitle: CronoTracker System Status
   introMessage: Real-time status and incident history for CronoTracker services
-  
+  theme: dark
+
   navbar:
+    - title: CronoTracker App
+      href: https://app.cronotracker.com
     - title: CronoTech Status
       href: /
+
+  css: |
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap');
+
+    :root {
+      --ct-purple:       #7c3aed;
+      --ct-purple-light: #a78bfa;
+      --ct-purple-dim:   rgba(124, 58, 237, 0.15);
+      --ct-bg:           #1e1b3a;
+      --ct-surface:      #272450;
+      --ct-surface-2:    #2f2b5a;
+      --ct-border:       rgba(255, 255, 255, 0.08);
+      --ct-text:         rgba(255, 255, 255, 0.90);
+      --ct-text-muted:   rgba(226, 217, 243, 0.55);
+      --ct-green:        #10b981;
+      --ct-red:          #ef4444;
+      --ct-yellow:       #f59e0b;
+    }
+
+    /* ── Base ── */
+    html, body {
+      font-family: 'Inter', sans-serif !important;
+      background: var(--ct-bg) !important;
+      color: var(--ct-text) !important;
+      margin: 0;
+    }
+
+    /* ── Navbar ── */
+    nav, header, .navbar {
+      background: var(--ct-surface) !important;
+      border-bottom: 1px solid var(--ct-border) !important;
+      backdrop-filter: blur(12px);
+      padding: 0 24px !important;
+    }
+
+    nav a, header a, .navbar a, .nav-brand {
+      color: var(--ct-text) !important;
+      font-weight: 500 !important;
+      text-decoration: none !important;
+      font-size: 14px !important;
+      transition: color 0.2s !important;
+    }
+
+    nav a:hover, header a:hover {
+      color: var(--ct-purple-light) !important;
+    }
+
+    /* Brand / logo text */
+    .navbar-brand, nav strong, nav b {
+      font-family: 'Syne', sans-serif !important;
+      font-weight: 800 !important;
+      font-size: 18px !important;
+      color: #fff !important;
+      letter-spacing: -0.5px !important;
+    }
+
+    /* ── Hero / intro ── */
+    h1 {
+      font-family: 'Syne', sans-serif !important;
+      font-weight: 800 !important;
+      font-size: clamp(24px, 4vw, 36px) !important;
+      letter-spacing: -1px !important;
+      color: #fff !important;
+      margin-bottom: 8px !important;
+    }
+
+    h2 {
+      font-family: 'Syne', sans-serif !important;
+      font-weight: 700 !important;
+      color: #fff !important;
+    }
+
+    /* ── Overall status banner ── */
+    .overall-status, [class*="overall"] {
+      background: var(--ct-purple-dim) !important;
+      border: 1px solid rgba(124, 58, 237, 0.3) !important;
+      border-radius: 12px !important;
+      padding: 16px 24px !important;
+      margin: 24px 0 !important;
+      font-weight: 600 !important;
+      font-size: 15px !important;
+      color: var(--ct-purple-light) !important;
+    }
+
+    /* ── Service cards ── */
+    .status-page > div, section, .service-check,
+    [class*="service"], [class*="monitor"] {
+      background: var(--ct-surface) !important;
+      border: 1px solid var(--ct-border) !important;
+      border-radius: 12px !important;
+      padding: 20px 24px !important;
+      margin-bottom: 12px !important;
+      transition: border-color 0.2s !important;
+    }
+
+    .service-check:hover, [class*="service"]:hover {
+      border-color: rgba(124, 58, 237, 0.35) !important;
+    }
+
+    /* ── Status badges / pills ── */
+    .badge, [class*="badge"], [class*="status-badge"] {
+      border-radius: 999px !important;
+      padding: 3px 12px !important;
+      font-size: 12px !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.3px !important;
+    }
+
+    /* Up / operational */
+    .badge-success, [class*="up"], [class*="operational"] {
+      background: rgba(16, 185, 129, 0.15) !important;
+      color: var(--ct-green) !important;
+      border: 1px solid rgba(16, 185, 129, 0.3) !important;
+    }
+
+    /* Down */
+    .badge-danger, [class*="down"] {
+      background: rgba(239, 68, 68, 0.15) !important;
+      color: var(--ct-red) !important;
+      border: 1px solid rgba(239, 68, 68, 0.3) !important;
+    }
+
+    /* Degraded */
+    .badge-warning, [class*="degraded"] {
+      background: rgba(245, 158, 11, 0.15) !important;
+      color: var(--ct-yellow) !important;
+      border: 1px solid rgba(245, 158, 11, 0.3) !important;
+    }
+
+    /* ── Uptime percentage ── */
+    .uptime-percentage, [class*="uptime"] {
+      color: var(--ct-green) !important;
+      font-weight: 700 !important;
+      font-size: 15px !important;
+    }
+
+    /* ── Response time ── */
+    [class*="response"], [class*="ping"] {
+      color: var(--ct-text-muted) !important;
+      font-size: 13px !important;
+    }
+
+    /* ── Time period tabs (24h / 7d / 30d etc) ── */
+    a[href*="?"], button[class*="tab"], [class*="period"] {
+      background: var(--ct-surface-2) !important;
+      border: 1px solid var(--ct-border) !important;
+      color: var(--ct-text-muted) !important;
+      border-radius: 8px !important;
+      padding: 4px 12px !important;
+      font-size: 13px !important;
+      font-weight: 500 !important;
+      cursor: pointer !important;
+      transition: all 0.2s !important;
+      text-decoration: none !important;
+    }
+
+    a[href*="?"]:hover, button[class*="tab"]:hover {
+      border-color: var(--ct-purple) !important;
+      color: var(--ct-purple-light) !important;
+    }
+
+    /* ── Graph images ── */
+    img {
+      border-radius: 8px !important;
+      opacity: 0.9 !important;
+    }
+
+    /* ── Links ── */
+    a {
+      color: var(--ct-purple-light) !important;
+      text-decoration: none !important;
+    }
+
+    a:hover {
+      color: #fff !important;
+    }
+
+    /* ── Footer ── */
+    footer, [class*="footer"] {
+      border-top: 1px solid var(--ct-border) !important;
+      color: var(--ct-text-muted) !important;
+      font-size: 13px !important;
+      padding: 24px !important;
+      text-align: center !important;
+      background: transparent !important;
+      margin-top: 48px !important;
+    }
+
+    /* ── Incident / issues section ── */
+    [class*="incident"], [class*="issue"] {
+      background: var(--ct-surface) !important;
+      border-left: 3px solid var(--ct-red) !important;
+      border-radius: 0 8px 8px 0 !important;
+      padding: 16px 20px !important;
+      margin: 8px 0 !important;
+    }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--ct-bg); }
+    ::-webkit-scrollbar-thumb { background: var(--ct-surface-2); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--ct-purple); }
 
 assignees:
   - killer6oose
