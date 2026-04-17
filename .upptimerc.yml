@@ -4,10 +4,20 @@ repo: uptime
 sites:
   - name: CronoTracker App
     url: https://app.cronotracker.com
+    headers:
+      X-Upptime-Token: $UPPTIME_TOKEN
   - name: CronoTracker API
     url: https://app.cronotracker.com/api/version
+    headers:
+      X-Upptime-Token: $UPPTIME_TOKEN
+    expectedStatusCodes:
+      - 200
+      - 401
+      - 403
   - name: CronoTech Consulting Home Landing
     url: https://cronotech.org
+    headers:
+      X-Upptime-Token: $UPPTIME_TOKEN
 
 status-website:
   cname: status.cronotracker.com
@@ -18,7 +28,8 @@ status-website:
   introMessage: Real-time status and incident history for CronoTracker services.
   themeUrl: https://status.cronotracker.com/dark.css
   theme: dark
-navbar:
+  themeUrl: https://status.cronotracker.com/assets/dark.css
+  navbar:
     - title: Status
       href: /
     - title: CronoTracker App
