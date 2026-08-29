@@ -4,21 +4,22 @@
     "url": "https://app.cronotracker.com",
     "icon": "https://icons.duckduckgo.com/ip3/app.cronotracker.com.ico",
     "slug": "crono-tracker-app",
-    "status": "up",
+    "status": "down",
     "uptime": "98.56%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
+    "uptimeDay": "99.78%",
+    "uptimeWeek": "99.97%",
+    "uptimeMonth": "99.99%",
     "uptimeYear": "98.56%",
-    "time": 609,
-    "timeDay": 191,
-    "timeWeek": 198,
-    "timeMonth": 211,
-    "timeYear": 609,
+    "time": 739,
+    "timeDay": 9844,
+    "timeWeek": 2623,
+    "timeMonth": 817,
+    "timeYear": 739,
     "dailyMinutesDown": {
       "2026-07-16": 1173,
       "2026-07-15": 1440,
-      "2026-07-14": 175
+      "2026-07-14": 175,
+      "2026-08-29": 3
     }
   },
   {
@@ -26,21 +27,22 @@
     "url": "https://app.cronotracker.com/api/version",
     "icon": "https://icons.duckduckgo.com/ip3/app.cronotracker.com.ico",
     "slug": "crono-tracker-api",
-    "status": "up",
+    "status": "down",
     "uptime": "98.56%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
+    "uptimeDay": "99.87%",
+    "uptimeWeek": "99.98%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "98.56%",
-    "time": 542,
-    "timeDay": 150,
-    "timeWeek": 137,
-    "timeMonth": 166,
-    "timeYear": 542,
+    "time": 671,
+    "timeDay": 9744,
+    "timeWeek": 2550,
+    "timeMonth": 769,
+    "timeYear": 671,
     "dailyMinutesDown": {
       "2026-07-16": 1173,
       "2026-07-15": 1440,
-      "2026-07-14": 174
+      "2026-07-14": 174,
+      "2026-08-29": 2
     }
   },
   {
@@ -48,21 +50,22 @@
     "url": "https://cronotech.org",
     "icon": "https://icons.duckduckgo.com/ip3/cronotech.org.ico",
     "slug": "crono-tech-consulting-home-landing",
-    "status": "up",
+    "status": "down",
     "uptime": "98.56%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "98.56%",
     "time": 370,
-    "timeDay": 351,
+    "timeDay": 206,
     "timeWeek": 363,
     "timeMonth": 426,
     "timeYear": 370,
     "dailyMinutesDown": {
       "2026-07-16": 1173,
       "2026-07-15": 1440,
-      "2026-07-14": 172
+      "2026-07-14": 172,
+      "2026-08-29": 0
     }
   }
 ]
