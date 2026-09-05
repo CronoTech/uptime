@@ -1,7 +1,7 @@
 url: https://app.cronotracker.com/api/version
 status: down
-code: 522
-responseTime: 19935
-lastUpdated: 2026-09-04T00:55:49.835Z
+code: 502
+responseTime: 46
+lastUpdated: 2026-09-05T00:47:56.233Z
 startTime: 2026-04-16T17:25:43.379Z
 generator: Upptime <https://github.com/upptime/upptime>
